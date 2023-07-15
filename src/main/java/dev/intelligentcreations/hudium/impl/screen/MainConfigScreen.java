@@ -4,7 +4,7 @@ import dev.intelligentcreations.hudium.impl.screen.widget.HudiumButtonWidget;
 import dev.intelligentcreations.hudium.impl.screen.widget.HudiumIconWidget;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.TextWidget;
-import net.minecraft.text.ScreenTexts;
+import net.minecraft.text.CommonTexts;
 import net.minecraft.text.Text;
 
 public final class MainConfigScreen extends AbstractConfigScreen {
@@ -48,7 +48,7 @@ public final class MainConfigScreen extends AbstractConfigScreen {
                 (height / 2) + 15,
                 180,
                 20,
-                ScreenTexts.DONE,
+                CommonTexts.DONE,
                 btn -> client.setScreen(parent)
         ));
     }

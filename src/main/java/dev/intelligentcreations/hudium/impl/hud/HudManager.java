@@ -6,7 +6,7 @@ import dev.intelligentcreations.hudium.api.hud.Component;
 import dev.intelligentcreations.hudium.api.hud.ComponentType;
 import dev.intelligentcreations.hudium.util.NumberUtil;
 import dev.intelligentcreations.hudium.util.Phys;
-import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.ApiStatus;
@@ -125,8 +125,8 @@ public final class HudManager {
         }
     }
 
-    public void render(MatrixStack matrices, @NotNull PlayerEntity camera, float tickDelta) {
-        components.forEach((pos, component) -> component.render(matrices, camera, tickDelta, pos));
+    public void render(GuiGraphics guiGraphics, @NotNull PlayerEntity camera, float tickDelta) {
+        components.forEach((pos, component) -> component.render(guiGraphics, camera, tickDelta, pos));
     }
 
     public static final Path CONFIG_FILE = Constants.HUD_CONFIG_DIR.resolve("components.json5");

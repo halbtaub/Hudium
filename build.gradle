@@ -94,8 +94,8 @@ allprojects {
     processResources {
         inputs.property "version", project.version
 
-        filesMatching(["fabric.mod.json", "mods.toml"]) {
-            expand "version": project.version
+        filesMatching(['pack.mcmeta', 'fabric.mod.json', 'mods.toml', '*.mixins.json']) {
+            expand project.properties
         }
     }
 }
@@ -103,6 +103,7 @@ allprojects {
 minecraft {
     runs.off = true
     combinedSourceSets = [sourceSets.main]
+
 }
 
 remapJar {

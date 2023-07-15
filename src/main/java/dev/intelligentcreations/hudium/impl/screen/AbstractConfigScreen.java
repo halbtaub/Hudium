@@ -1,7 +1,7 @@
 package dev.intelligentcreations.hudium.impl.screen;
 
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;
 
 public abstract class AbstractConfigScreen extends Screen {
@@ -13,13 +13,13 @@ public abstract class AbstractConfigScreen extends Screen {
     }
 
     @Override
-    public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
-        renderConfigBackground(matrices, mouseX, mouseY, delta);
-        super.render(matrices, mouseX, mouseY, delta);
+    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float delta) {
+        renderConfigBackground(guiGraphics, mouseX, mouseY, delta);
+        super.render(guiGraphics, mouseX, mouseY, delta);
     }
 
     @SuppressWarnings("unused")
-    protected void renderConfigBackground(MatrixStack matrices, int mouseX, int mouseY, float delta) {
-        fill(matrices, 0, 0, width, height, 0xff303030);
+    protected void renderConfigBackground(GuiGraphics guiGraphics, int mouseX, int mouseY, float delta) {
+        guiGraphics.fill(0, 0, width, height, 0xff303030);
     }
 }

@@ -1,11 +1,11 @@
 [versions]
-minecraft = "1.19.4"
-quilt_mappings = "1.19.4+build.10"
+minecraft = "1.20.1"
+quilt_mappings = "1.20.1+build.20"
 
-fabric_loader = "0.14.19"
-fabric_api = "0.78.0+1.19.4"
+fabric_loader = "0.14.21"
+fabric_api = "0.85.0+1.20.1"
 
-forge = "1.19.4-45.0.59"
+forge = "1.20.1-47.1.16"
 
 quilt_json5 = "1.0.3"
 

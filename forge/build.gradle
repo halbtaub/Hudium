@@ -51,7 +51,9 @@ sourcesJar {
     from commonSources.archiveFile.map { zipTree(it) }
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
-
+processResources {
+    from project(":").sourceSets.main.resources
+}
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
